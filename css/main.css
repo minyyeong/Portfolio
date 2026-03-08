@@ -46,9 +46,6 @@ section {
 	position: relative;
 }
 
-span {
-	padding: 0 10px;
-}
 
 
 
@@ -66,7 +63,8 @@ span {
 	width: 40%;
 	height: auto;
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 
@@ -81,21 +79,6 @@ span {
 .webpage img {
 	width: 100%;
 	height: auto;
-}
-
-.bodywrap h1 {
-	width: 100%;
-	font-size: 15px;
-	font-weight: 400;
-	font-family: 'Nunito Sans', sans-serif;
-	margin-bottom: 50px;
-	color: #444;
-	letter-spacing: 0.7px;
-}
-
-.bodywrap h1 em {
-	font-style: normal;
-	font-weight: 700;
 }
 
 
@@ -151,16 +134,11 @@ span {
 	justify-content: space-between;
 }
 
-.section1 #myself {
-	width: 10%;
-	height: 100%;
-	position: relative;
-}
 
-#about {
+.about {
 	position: absolute;
-	top:10%;
-	left:50%;
+	top: 13%;
+    left: 5%;
 	height: 80%;
 	display: flex;
 	flex-direction: column;
@@ -219,26 +197,41 @@ span {
 
 /* 글씨 */
 .typingbox {
-	width: 80%;
+	width: 100%;
 	position: absolute;
 	top: 48%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-main {
+.typingbox h2 {
 	transition: all 0.5s;
 	font-variation-settings: "wght" 800, "ital" 1;
-	font-size: 9rem;
+	font-size: clamp(50px, 7vw, 140px);
 	text-align: center;
 	color: transparent;
 	font-family: 'Nunito Sans', sans-serif;
 	cursor: pointer;
 	font-weight:700;
 	color: #000;
-	line-height:140px;
+	line-height: 1;
 }
-
+.typingbox p {
+	width: 100%;
+	font-size: clamp(17px, 1vw, 23px);
+	font-weight: 400;
+	font-family: 'Nunito Sans', sans-serif;
+	margin-bottom: 50px;
+	color: #000;
+	opacity: 0.5;
+	text-align: center;
+	letter-spacing: 0.7px;
+	margin-top: 2%;
+}
 
 @keyframes shine {
 	0% {
@@ -274,7 +267,7 @@ main {
 }
 
 .topnav {
-	width:1800px;
+	width:96%;
 	height:50px;
 	border-top:3px solid #000;
 	border-bottom:1px solid #000;
@@ -319,11 +312,14 @@ main {
 	margin-bottom: 3px;
 }
 
+
+
+
 .navbottomwrap {
-	width:2000px;
-	height:280px;
 	display: block;
-	bottom:20px;
+	bottom:20%;
+	left: 50%;
+	transform: translateX(-50%);
 	margin: 0 auto;
 	position: absolute;
 	display: flex;
@@ -331,10 +327,7 @@ main {
 }
 
 .navbottom {
-	width:1250px;
-	height:250px;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	position: absolute;
@@ -365,6 +358,18 @@ main {
 @keyframes cursor{ 0%{border-right: 1px solid #fff} 50%{border-right: 1px solid #000} 100%{border-right: 1px solid #fff} }
 
 
+
+/*** 공통 ***/
+
+.project_span {
+	font-size: 15px;
+	font-weight: 300;
+	color: #000;
+	opacity: 0.7;
+	letter-spacing: 0.5px;
+	margin-bottom: 5%;
+	font-family: 'Nunito Sans', sans-serif;
+}
 /*프로젝트1 교보*/
 
 .section2 {
@@ -384,6 +389,7 @@ main {
 	letter-spacing: 0.5px;
 	font-family: 'Nunito Sans', sans-serif;
 }
+
 
 .section2 h4 {
 	width: 100%;
@@ -434,6 +440,11 @@ main {
 	background-color: #f8f8f8;
 }
 
+
+.btn_div {
+	display: flex;
+	align-items: center;
+}
 .btn_main1 {
 	width: 150px;
 	line-height: 36px;
@@ -580,10 +591,11 @@ main {
 
 .section4 h2 {
 	width: 100%;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 900;
-	color: #a7753c;
-	letter-spacing: 0.5px;
+	color: #003057;
+	line-height: 1.2;
+	letter-spacing: 0.1px;
 	font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -625,16 +637,11 @@ main {
 }
 
 .section4 .color li:first-of-type {
-	background-color: #EEDFD2;
-}
-
-.section4 .color li:nth-of-type(2) {
-
-	background-color: #F5EFEB;
+	background-color: #003057;
 }
 
 .section4 .color li:last-of-type {
-	background-color: #121426;
+	background-color: #fff;
 }
 
 .section4 .mobile {
@@ -672,36 +679,14 @@ main {
 }
 
 
-.btn_main3 {
-	width: 150px;
-	line-height: 36px;
-	margin-right: 10px;
-	padding: 0;
-	background-color: rgb(247, 247, 247);
-	color: #a7753c;
-	border: 1px solid #a7753c;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
-}
-
-.btn_main3:hover {
-	background-color: #a7753c;
-	color: #fff;
-	border: 1px solid #a7753c;
-}
-
 .btn_sub3 {
 	width: 150px;
 	line-height: 36px;
 	margin-right: 10px;
 	padding: 0;
 	background-color: rgb(247, 247, 247);
-	color: #a7753c;
-	border: 1px solid #a7753c;
+	color: #003057;
+	border: 1px solid #003057;
 	font-size: 14px;
 	text-align: center;
 	cursor: pointer;
@@ -711,9 +696,9 @@ main {
 }
 
 .btn_sub3:hover {
-	background-color: #a7753c;
+	background-color: #003057;
 	color: #fff;
-	border: 1px solid #a7753c;
+	border: 1px solid #003057;
 }
 
 /* 설공 */
@@ -1017,11 +1002,11 @@ letter-spacing: 1px;
 }
 
 .bar .progress-line.REACT span {
-	width: 70%;
+	width: 60%;
 }
 
 .bar .progress-line.TYPESCRIPT span {
-	width: 65%;
+	width: 50%;
 }
 
 .progress-line span::after {
