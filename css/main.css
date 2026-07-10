@@ -125,6 +125,7 @@ section {
 	display: block;
 }
 
+
 /* section 1 : 메인페이지 */
 .section1 {
 	width: 100%;
@@ -431,48 +432,26 @@ section .color li {
 	display: flex;
 	align-items: center;
 }
-.btn_main1 {
+.contents_btn {
 	width: 150px;
 	line-height: 36px;
 	margin-right: 10px;
 	padding: 0;
 	background-color: rgb(247, 247, 247);
-	color: #003169;
-	border: 1px solid #003169;
 	font-size: 14px;
 	text-align: center;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: all 0.5s;
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 600;
 }
 
-.btn_main1:hover {
-	background-color: #003169;
+.contents_btn:hover {
 	color: #fff;
-	border: 1px solid #003169;
-}
-.btn_sub1 {
-	width: 150px;
-	line-height: 36px;
-	margin-right: 10px;
-	padding: 0;
-	background-color: rgb(247, 247, 247);
-	color: #003169;
-	border: 1px solid #003169;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
+	transition: all 0.5s;
 }
 
-.btn_sub1:hover {
-	background-color: #003169;
-	color: #fff;
-	border: 1px solid #003169;
-}
+
 
 
 
@@ -493,6 +472,15 @@ section .color li {
 
 .section2 .color li:nth-of-type(2) {
 	background-color: #EDF3FA;
+}
+.section2 .contents_btn {
+	color: #0B3C69;
+	border: 1px solid #0B3C69;
+}
+.section2 .contents_btn:hover {
+	background-color: #0B3C69;
+	color: #fff;
+	border: 1px solid #0B3C69;
 }
 
 
@@ -524,27 +512,17 @@ section .color li {
 	background-color: #fff;
 }
 
-.btn_sub3 {
-	width: 150px;
-	line-height: 36px;
-	margin-right: 10px;
-	padding: 0;
-	background-color: rgb(247, 247, 247);
+.section3 .contents_btn {
 	color: #001241;
 	border: 1px solid #001241;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
 }
-
-.btn_sub3:hover {
+.section3 .contents_btn:hover {
 	background-color: #001241;
 	color: #fff;
 	border: 1px solid #001241;
 }
+
+
 
 
 /* 교보 */
@@ -571,7 +549,7 @@ section .color li {
 	position: absolute;
 	left: 44%;
 	display: block;
-	transform: translateX(-50%) translateY(40%);
+	transform: translateX(-50%) translateY(30%);
 	z-index: 5;
 	background-image: url(../img/phon.png);
 	background-size: 100% 100%;
@@ -615,27 +593,16 @@ section .color li {
 }
 
 
-.btn_main4, .btn_sub4 {
-	width: 150px;
-	line-height: 36px;
-	margin-right: 10px;
-	padding: 0;
-	background-color: rgb(247, 247, 247);
+.section4 .contents_btn {
 	color: #003057;
 	border: 1px solid #003057;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
 }
-.btn_main4:hover,
-.btn_sub4:hover {
+.section4 .contents_btn:hover {
 	background-color: #003057;
 	color: #fff;
 	border: 1px solid #003057;
 }
+
 
 
 
@@ -659,22 +626,11 @@ section .color li {
 	background-color: #fff;
 }
 
-.btn_main5 {
-	width: 150px;
-	line-height: 36px;
-	margin-right: 10px;
-	padding: 0;
-	background-color: rgb(247, 247, 247);
+.section5 .contents_btn {
 	color: #170C5E;
 	border: 1px solid #170C5E;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
 }
-.btn_main5:hover {
+.section5 .contents_btn:hover {
 	background-color: #170C5E;
 	color: #fff;
 	border: 1px solid #170C5E;
@@ -710,23 +666,11 @@ section .color li {
 }
 
 
-.btn_main6, .btn_sub6 {
-	width: 150px;
-	line-height: 36px;
-	margin-right: 10px;
-	padding: 0;
-	background-color: rgb(247, 247, 247);
+.section6 .contents_btn {
 	color: #f36046;
 	border: 1px solid #f36046;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
 }
-.btn_main6:hover,
-.btn_sub6:hover {
+.section6 .contents_btn:hover {
 	background-color: #f36046;
 	color: #fff;
 	border: 1px solid #f36046;
@@ -736,6 +680,9 @@ section .color li {
 
 
 
+
+
+/* 프로필 */
 .profile_wrap {
 	width: 70%;
 	height: 100%;
