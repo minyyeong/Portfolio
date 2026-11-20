@@ -36,6 +36,7 @@
 		};
 
 		this.defaults = defaults;
+		this.txtAniTimers = [];
 		/**
 		 * Init build
 		 */
@@ -220,6 +221,41 @@
 					this.ul.childNodes[i].firstChild.classList.add('active');		
 				}
 			}
+
+			this.syncSectionClasses();
+		};
+
+		this.syncSectionClasses = function () {
+			var sections = this.defaults.sections;
+			var current = this.defaults.currentPosition;
+
+			for (var i = 0; i < sections.length; i++) {
+				var section = sections[i];
+
+				if (i == current) {
+					if (this.txtAniTimers[i]) {
+						clearTimeout(this.txtAniTimers[i]);
+						this.txtAniTimers[i] = null;
+					}
+					section.classList.add('active', 'txt_ani');
+				} else if (section.classList.contains('active')) {
+					section.classList.remove('active');
+					this.scheduleTxtAniRemoval(section, i);
+				}
+			}
+		};
+
+		this.scheduleTxtAniRemoval = function (section, index) {
+			var _scroll = this;
+
+			if (_scroll.txtAniTimers[index]) {
+				clearTimeout(_scroll.txtAniTimers[index]);
+			}
+
+			_scroll.txtAniTimers[index] = setTimeout(function () {
+				section.classList.remove('txt_ani');
+				_scroll.txtAniTimers[index] = null;
+			}, 3000);
 		};
 
 		this.changeCurrentPosition = function (position) {
